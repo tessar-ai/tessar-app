@@ -8,8 +8,8 @@ const Hero = () => (
     </p>
 
     <h1 className="font-display text-[clamp(56px,9vw,120px)] font-light uppercase leading-[0.9] tracking-tight">
-      Anything is
-      <br />a <span className="text-accent">plugin</span>
+      Anything can
+      <br />be <span className="text-accent">plugin</span>
     </h1>
 
     <p className="mt-10 max-w-2xl text-[15px] leading-relaxed text-muted">

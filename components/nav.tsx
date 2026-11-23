@@ -22,7 +22,7 @@ const Nav = () => (
 
     <Link href="/" className="relative pl-[0.2em] text-xl tracking-[0.2em]">
       <Image
-        src="/tessar-dark.png"
+        src="/tessar.png"
         alt="Tessar Logo"
         width={62}
         height={62}
