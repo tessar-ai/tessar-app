@@ -15,10 +15,10 @@ const Hero = () => (
       <span className="text-accent">be a plugin</span>
     </h1>
 
-    <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
-      A TypeScript framework and SDK for building CLI agents and embedding
-      agents in applications. Start with an Agent, add plugins when you need
-      them.
+    <p className="mt-5 max-w-none text-[15px] leading-relaxed text-muted">
+      An open-source SDK for building CLI agents and embedding agents in applications.
+      <br />
+      Start with an Agent, add plugins when you need them.
     </p>
 
     <div className="mt-7 flex flex-wrap justify-center items-center gap-3">

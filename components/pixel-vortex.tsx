@@ -62,8 +62,11 @@ export default function PixelVortex() {
         density += eye * (detail - .5) * .12;
         // Sparse fixed grain breaks edges without making the whole field flicker.
         const threshold = .48 + (grain[i] - .5) * .22;
-        const c = density > threshold ? 36 : 0, j = i * 4;
-        data[j] = data[j + 1] = data[j + 2] = c; data[j + 3] = 255;
+        const on = density > threshold, j = i * 4;
+        data[j] = on ? 38 : 6;    // R
+        data[j + 1] = on ? 52 : 14;   // G
+        data[j + 2] = on ? 68 : 28;   // B
+        data[j + 3] = 255;
       }
       ctx!.putImageData(img, 0, 0);
     }

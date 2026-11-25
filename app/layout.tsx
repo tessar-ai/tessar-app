@@ -16,8 +16,8 @@ const display = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Tessar",
-  description: "Anything is a plugin",
+  title: "Tessar | Anything can be a plugin",
+  description: "An open-source SDK for building CLI agents and embedding agents in applications. Start with an Agent, add plugins when you need them.",
 };
 
 const RootLayout = ({ children }: LayoutProps<"/">) => (
