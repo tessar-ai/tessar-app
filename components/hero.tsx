@@ -1,40 +1,39 @@
 import Link from "next/link";
-import CodeWindow from "@/components/code-window";
+
+const btn =
+  "glow-border px-8 py-4 text-[13px] uppercase tracking-[0.12em] transition-colors";
 
 const Hero = () => (
-  <section className="mx-auto flex max-w-5xl flex-col items-center px-10 pt-16 text-center">
+  <section className="relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center px-5 pt-4 pb-12 text-center">
     <p className="mb-8 text-[12px] uppercase tracking-[0.3em] text-muted">
-      <span className="mr-2 text-accent">✦</span>TypeScript SDK
+      <span className="mr-2 text-accent">✦</span>Tessar
     </p>
 
-    <h1 className="font-display text-[clamp(56px,9vw,120px)] font-light uppercase leading-[0.9] tracking-tight">
+    <h1 className="font-display text-[clamp(48px,5vw,76px)] font-medium uppercase leading-[0.9] tracking-tight">
       Anything can
-      <br />be <span className="text-accent">plugin</span>
+      <br />
+      <span className="text-accent">be a plugin</span>
     </h1>
 
-    <p className="mt-10 max-w-2xl text-[15px] leading-relaxed text-muted">
+    <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
       A TypeScript framework and SDK for building CLI agents and embedding
       agents in applications. Start with an Agent, add plugins when you need
       them.
     </p>
 
-    <div className="mt-12 flex items-center gap-3 text-[13px]">
+    <div className="mt-7 flex flex-wrap justify-center items-center gap-3">
       <Link
         href="/docs"
-        className="glow-border rounded-full bg-fg px-7 py-3.5 text-bg transition-colors hover:bg-accent"
+        className={`${btn} bg-accent text-white hover:bg-accent`}
       >
         Get started
       </Link>
       <Link
         href="https://github.com/tessar-ai/tessar"
-        className="glow-border rounded-full border border-fg/30 bg-fg/5 px-7 py-3.5 backdrop-blur transition-colors hover:border-fg/60 hover:text-accent"
+        className={`${btn} border border-fg/30 hover:text-accent`}
       >
         GitHub
       </Link>
-    </div>
-
-    <div className="mt-20 w-full">
-      <CodeWindow />
     </div>
   </section>
 );

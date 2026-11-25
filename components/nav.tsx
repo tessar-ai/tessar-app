@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const side =
-  "flex items-center justify-around text-[13px] uppercase tracking-[0.12em] text-muted";
+  "flex items-center justify-evenly gap-6 text-[13px] uppercase tracking-[0.12em] text-muted";
 const link =
   "relative transition-colors hover:text-accent max-md:hidden " +
   "after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-[calc(100%-0.12em)] " +
@@ -10,7 +10,7 @@ const link =
   "hover:after:scale-x-100";
 
 const Nav = () => (
-  <header className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-6 px-10 py-7">
+  <header className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-6 px-10 py-7">
     <nav className={side}>
       <Link href="/docs" className={link}>
         Docs
@@ -34,7 +34,7 @@ const Nav = () => (
       <Link href="/community" className={link}>
         Community
       </Link>
-      <Link href="https://github.com" className={link}>
+      <Link href="https://github.com/tessar-ai/tessar" className={link}>
         GitHub
       </Link>
     </nav>

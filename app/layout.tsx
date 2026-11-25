@@ -27,7 +27,7 @@ const RootLayout = ({ children }: LayoutProps<"/">) => (
   >
     <body suppressHydrationWarning>
       <div className="frame" />
-      <div className="relative isolate overflow-x-hidden p-[14px]">
+      <div className="relative isolate flex min-h-svh flex-col p-[14px]">
         <Backdrop />
         <Nav />
         {children}
