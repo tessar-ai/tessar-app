@@ -1,8 +1,7 @@
+import { RootProvider } from "fumadocs-ui/provider/next";
 import type { Metadata } from "next";
 import { Barlow_Condensed, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/nav";
-import Backdrop from "@/components/backdrop";
 
 const mono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,14 +23,10 @@ const RootLayout = ({ children }: LayoutProps<"/">) => (
   <html
     lang="en"
     className={`${mono.variable} ${display.variable} antialiased`}
+    suppressHydrationWarning
   >
-    <body suppressHydrationWarning>
-      <div className="frame" />
-      <div className="relative isolate flex min-h-svh flex-col p-[14px]">
-        <Backdrop />
-        <Nav />
-        {children}
-      </div>
+    <body className="flex min-h-svh flex-col" suppressHydrationWarning>
+      <RootProvider theme={{ enableColorScheme: false }}>{children}</RootProvider>
     </body>
   </html>
 );

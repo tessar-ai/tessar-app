@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
 
 @theme inline {
   --color-bg: ##060E1C;
@@ -76,14 +78,23 @@
 }
 
 @layer base {
-  html {
-    @apply bg-bg font-mono text-fg;
+  html.dark,
+  html:has(.site-shell) {
     color-scheme: dark;
+  }
+
+  html:has(.site-shell) {
+    @apply bg-bg font-mono text-fg;
     scrollbar-width: thin;
     scrollbar-color: var(--color-accent) var(--color-bg);
   }
 
-  ::selection {
+  body:has(.site-shell) {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .site-shell ::selection {
     background: var(--color-accent);
     color: var(--color-bg);
   }

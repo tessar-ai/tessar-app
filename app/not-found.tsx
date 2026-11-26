@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteShell from "@/components/site-shell";
 
 const link =
   "relative transition-colors hover:text-accent max-md:hidden " +
@@ -7,13 +8,15 @@ const link =
   "hover:after:scale-x-100";
 
 const NotFound = () => (
-  <main className="px-10 py-24 text-center">
-    <h1 className="text-6xl">404</h1>
-    <p className="mt-4 text-fg/60">Page not found.</p>
-    <Link href="/" className={link}>
-      Back home
-    </Link>
-  </main>
+  <SiteShell>
+    <main className="px-10 py-24 text-center">
+      <h1 className="text-6xl">404</h1>
+      <p className="mt-4 text-fg/60">Page not found.</p>
+      <Link href="/" className={link}>
+        Back home
+      </Link>
+    </main>
+  </SiteShell>
 );
 
 export default NotFound;
