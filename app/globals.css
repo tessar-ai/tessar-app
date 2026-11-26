@@ -1,9 +1,14 @@
 @import "tailwindcss";
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
+@import 'fumadocs-ui/css/generated/notebook.css';
+
+.dark {
+  --color-fd-background: var(--color-bg);
+}
 
 @theme inline {
-  --color-bg: ##060E1C;
+  --color-bg: #242424;
   --color-surface: #171514;
   --color-line: #2a2623;
   --color-fg: #F4F4F4;
@@ -78,6 +83,7 @@
 }
 
 @layer base {
+
   html.dark,
   html:has(.site-shell) {
     color-scheme: dark;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./logo";
 
 const links = [
   { href: "/docs", label: "Docs" },
@@ -35,15 +35,7 @@ const Nav = () => {
           ))}
         </nav>
 
-        <Link href="/" className="relative col-start-2 pl-[0.2em]">
-          <Image
-            src="/tessar.png"
-            alt="Tessar Logo"
-            width={62}
-            height={62}
-            className="object-contain"
-          />
-        </Link>
+        <Logo className="relative pl-[0.2em] col-start-2" />
 
         <nav className={side}>
           {links.slice(2).map((l) => (

@@ -1,0 +1,5 @@
+{
+  "title": "Build",
+  "defaultOpen": true,
+  "pages": ["agent", "stream", "tools", "sessions", "plugins", "storage"]
+}

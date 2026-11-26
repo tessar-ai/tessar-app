@@ -26,7 +26,7 @@ const RootLayout = ({ children }: LayoutProps<"/">) => (
     suppressHydrationWarning
   >
     <body className="flex min-h-svh flex-col" suppressHydrationWarning>
-      <RootProvider theme={{ enableColorScheme: false }}>{children}</RootProvider>
+      <RootProvider theme={{ forcedTheme: "dark", defaultTheme: "dark" }}>{children}</RootProvider>
     </body>
   </html>
 );
